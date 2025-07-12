@@ -1,4 +1,4 @@
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, RoundedBox } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { useMediaQuery } from "react-responsive";
 import { OptimizedRoom } from "./OptimizedRoom";
@@ -16,11 +16,14 @@ const HeroExperience = () => {
 
       <OrbitControls
         enablePan={false}
-        enableZoom={!isTablet}
-        maxDistance={20}
-        minDistance={5}
+        // enableZoom={!isTablet}
+        enableZoom={false}
+        maxDistance={15}
+        minDistance={15}
         minPolarAngle={Math.PI / 5}
         maxPolarAngle={Math.PI / 2}
+        minAzimuthAngle={-Math.PI / 6} // -30°
+        maxAzimuthAngle={Math.PI / 6} // +30°
       />
 
       <group

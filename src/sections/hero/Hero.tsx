@@ -1,4 +1,4 @@
-import { HeroExperience } from "../../components";
+import { AnimatedCounter, HeroExperience } from "../../components";
 import HeroTextContent from "./HeroTextContent";
 
 const Hero = () => {
@@ -19,6 +19,8 @@ const Hero = () => {
           </div>
         </figure>
       </div>
+
+      <AnimatedCounter />
     </section>
   );
 };
