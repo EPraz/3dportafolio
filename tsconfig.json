@@ -1,4 +1,7 @@
 {
+  "compilerOptions": {
+    "allowJs": true,        // <- permite importar .js y .jsx
+  },
   "files": [],
   "references": [
     { "path": "./tsconfig.app.json" },

@@ -10,9 +10,9 @@ const HeroTextContent = () => {
             Shaping{" "}
             <span className="slide">
               <span className="wrapper">
-                {heroWords.map((word) => (
+                {heroWords.map((word, index) => (
                   <span
-                    key={word.text}
+                    key={index}
                     className="flex items-center md:gap-3 gap-1 pb-2"
                   >
                     <img
