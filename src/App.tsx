@@ -1,5 +1,5 @@
 import { NavBar } from "./components";
-import { Hero, Showcase } from "./sections";
+import { Hero, Logo, Showcase } from "./sections";
 
 const App = () => {
   return (
@@ -8,6 +8,7 @@ const App = () => {
         <NavBar />
         <Hero />
         <Showcase />
+        <Logo />
       </div>
     </main>
   );

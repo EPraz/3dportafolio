@@ -1,4 +1,4 @@
-export const logoIconsList = [
+export const logoIconsList: { imgPath: string; name?: string }[] = [
   {
     imgPath: "/images/logos/company-logo-1.png",
   },
