@@ -1,5 +1,5 @@
 import { NavBar } from "./components";
-import { Hero, Logo, Showcase } from "./sections";
+import { FeatureCards, Hero, Logo, Showcase } from "./sections";
 
 const App = () => {
   return (
@@ -9,6 +9,7 @@ const App = () => {
         <Hero />
         <Showcase />
         <Logo />
+        <FeatureCards />
       </div>
     </main>
   );
