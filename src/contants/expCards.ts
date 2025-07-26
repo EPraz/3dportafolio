@@ -1,4 +1,13 @@
-export const expCards = [
+export interface ExpCardsProps {
+  review: string;
+  imgPath: string;
+  logoPath: string;
+  title: string;
+  date: string;
+  responsibilities: string[];
+}
+
+export const expCards: ExpCardsProps[] = [
   {
     review:
       "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",

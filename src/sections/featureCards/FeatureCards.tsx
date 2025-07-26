@@ -2,7 +2,7 @@ import { abilities } from "../../contants";
 
 const FeatureCards = () => {
   return (
-    <div className="w-full padding-x-lg">
+    <section className="w-full padding-x-lg">
       <div className="mx-auto grid-3-cols">
         {abilities.map(({ imgPath, title, desc }, index) => (
           <div
@@ -18,7 +18,7 @@ const FeatureCards = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
