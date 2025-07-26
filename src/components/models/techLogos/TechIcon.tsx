@@ -1,0 +1,64 @@
+import { Environment, Float, OrbitControls, useGLTF } from "@react-three/drei";
+import type { TechStackIconProps } from "../../../contants";
+import { Canvas } from "@react-three/fiber";
+import { useEffect } from "react";
+import * as THREE from "three";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+
+type Props = {
+  model: TechStackIconProps;
+};
+
+const TechIcon = ({ model }: Props) => {
+  const scene = useGLTF(model.modelPath);
+
+  useGSAP(() => {
+    gsap.fromTo(
+      ".tech-card",
+      {
+        y: 50,
+        opacity: 0,
+      },
+      {
+        opacity: 1,
+        duration: 1,
+        ease: "power2.inOut",
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: "#skills",
+          start: "top center",
+        },
+      }
+    );
+  });
+
+  useEffect(() => {
+    // just to make the icon white
+    if (model.name === "Interactive Developer") {
+      scene.scene.traverse((child) => {
+        if (child.isMesh && child.name === "Object_5") {
+          child.material = new THREE.MeshStandardMaterial({ color: "white" });
+        }
+      });
+    }
+  });
+
+  return (
+    <Canvas>
+      <ambientLight intensity={0.3} />
+      <directionalLight position={[5, 5, 5]} intensity={1} />
+      <Environment preset="city" />
+
+      {/* <OrbitControls enableZoom={false} /> */}
+
+      <Float speed={5.5} rotationIntensity={0.5} floatIntensity={0.9}>
+        <group scale={model.scale} rotation={model.rotation}>
+          <primitive object={scene.scene} />
+        </group>
+      </Float>
+    </Canvas>
+  );
+};
+
+export default TechIcon;

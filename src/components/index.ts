@@ -6,3 +6,4 @@ export { default as GlowCard } from "./GlowCard";
 export { default as ResponsabilitiesCard } from "./ResponsabilitiesCard";
 
 export * from "./heroModels";
+export * from "./models";

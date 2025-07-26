@@ -1,4 +1,11 @@
-export const techStackIcons = [
+export type TechStackIconProps = {
+  name: string;
+  modelPath: string;
+  scale: number;
+  rotation: [number, number, number];
+};
+
+export const techStackIcons: TechStackIconProps[] = [
   {
     name: "React Developer",
     modelPath: "/models/react_logo-transformed.glb",

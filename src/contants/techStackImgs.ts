@@ -1,14 +1,20 @@
-export const techStackImgs = [
+export type TechStackImgsProps = {
+  name: string;
+  imgPath: string;
+};
+
+export const techStackImgs: TechStackImgsProps[] = [
   {
     name: "React Developer",
     imgPath: "/images/logos/react.png",
   },
+
   {
-    name: "Python Developer",
-    imgPath: "/images/logos/python.svg",
+    name: "C# Developer",
+    imgPath: "/images/logos/csharp.png",
   },
   {
-    name: "Backend Developer",
+    name: "Backend Developer (NodeJS)",
     imgPath: "/images/logos/node.png",
   },
   {
@@ -16,7 +22,11 @@ export const techStackImgs = [
     imgPath: "/images/logos/three.png",
   },
   {
-    name: "Project Manager",
-    imgPath: "/images/logos/git.svg",
+    name: "React Native Developer",
+    imgPath: "/images/logos/react.png",
   },
+  // {
+  //   name: "Project Manager",
+  //   imgPath: "/images/logos/git.svg",
+  // },
 ];
