@@ -1,4 +1,10 @@
-export const socialImgs = [
+export type SocialImgsProps = {
+  name: string;
+  url: string;
+  imgPath: string;
+};
+
+export const socialImgs: SocialImgsProps[] = [
   {
     name: "insta",
     url: "https://www.instagram.com/",

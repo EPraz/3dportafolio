@@ -6,3 +6,4 @@ export * from "./experience";
 export * from "./techStack";
 export * from "./testimonials";
 export * from "./contact";
+export * from "./footer";
