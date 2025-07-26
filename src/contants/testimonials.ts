@@ -1,4 +1,11 @@
-export const testimonials = [
+export type TestimonialProps = {
+  name: string;
+  mentions: string;
+  review: string;
+  imgPath: string;
+};
+
+export const testimonials: TestimonialProps[] = [
   {
     name: "Esther Howard",
     mentions: "@estherhoward",

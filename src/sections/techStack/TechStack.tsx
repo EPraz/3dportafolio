@@ -34,10 +34,10 @@ const TechStack = () => {
               key={index}
               className="card-border tech-card overflow-hidden group xl:rounded-full rounded-lg"
             >
-              <div className="tech-card-animated-bg" />
+              {/* <div className="tech-card-animated-bg" /> */}
               <div className="tech-card-content">
                 <div className="tech-icon-wrapper">
-                  <img src={icon.imgPath} />
+                  <img src={icon.imgPath} width={135} />
                 </div>
                 <div className="padding-x w-full">
                   <p>{icon.name}</p>

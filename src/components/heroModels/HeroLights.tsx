@@ -50,9 +50,9 @@ const HeroLights = () => {
       <pointLight position={[1, 2, -2]} intensity={8} color="#ffb703" /> */}
       {/* <pointLight position={[0, 1, 0]} intensity={10} color="#48cae4" />
       <pointLight position={[1, 2, -2]} intensity={10} color="#0077b6" /> */}
-      {/* <pointLight position={[0, 1, 0]} intensity={12} color="#4cc9f0" />
-      <pointLight position={[1, 2, -2]} intensity={10} color="#b5179e" /> */}
-      <pointLight
+      <pointLight position={[0, 1, 0]} intensity={12} color="#4cc9f0" />
+      <pointLight position={[1, 2, -2]} intensity={10} color="#b5179e" />
+      {/* <pointLight
         position={[0, 1.5, 1]}
         intensity={5}
         color="#fcd5ce" // luz ambiente general cálida
@@ -62,7 +62,7 @@ const HeroLights = () => {
         position={[1, 2, -2]}
         intensity={3}
         color="#ffe5b4" // iluminación de fondo suave
-      />
+      /> */}
     </>
   );
 };

@@ -1,17 +1,20 @@
-import { NavBar } from "./components";
+import { NavBar, StarsCanvas } from "./components";
 import {
+  Contact,
   Experience,
   FeatureCards,
   Hero,
   Logo,
   Showcase,
   TechStack,
+  Testimonials,
 } from "./sections";
 
 const App = () => {
   return (
     <main>
-      <div>
+      <div className="relative z-[10]">
+        <StarsCanvas />
         <NavBar />
         <Hero />
         <Showcase />
@@ -19,6 +22,8 @@ const App = () => {
         <FeatureCards />
         <Experience />
         <TechStack />
+        <Testimonials />
+        <Contact />
       </div>
     </main>
   );

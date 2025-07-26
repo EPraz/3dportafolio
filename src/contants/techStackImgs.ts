@@ -22,8 +22,16 @@ export const techStackImgs: TechStackImgsProps[] = [
     imgPath: "/images/logos/three.png",
   },
   {
-    name: "React Native Developer",
-    imgPath: "/images/logos/react.png",
+    name: "TypeScript",
+    imgPath: "/images/logos/typescript.png",
+  },
+  {
+    name: "Tailwind",
+    imgPath: "/images/logos/tailwind.png",
+  },
+  {
+    name: "Material UI",
+    imgPath: "/images/logos/mui.png",
   },
   // {
   //   name: "Project Manager",
