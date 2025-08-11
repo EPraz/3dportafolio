@@ -39,9 +39,24 @@ const ComputersCanvas = () => {
   return (
     <Canvas
       frameloop="demand"
+      dpr={[1, 1.5]}
+      className="pointer-events-none"
       shadows
       camera={{ position: [20, 3, 5], fov: 25 }}
-      gl={{ preserveDrawingBuffer: true }}
+      gl={{
+        preserveDrawingBuffer: false,
+        powerPreference: "low-power",
+        antialias: true,
+      }}
+      onCreated={({ gl }) => {
+        // protege del context loss (Android/iOS)
+        gl.getContext().canvas.addEventListener(
+          "webglcontextlost",
+          (e) => e.preventDefault(),
+          { passive: false }
+        );
+      }}
+      style={{ touchAction: "pan-y" }} // permite scroll vertica
     >
       <Suspense fallback={<Loader />}>
         <HeroLights />
@@ -52,11 +67,7 @@ const ComputersCanvas = () => {
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
         />
-        <group
-          scale={isMobile ? 0.45 : isTablet ? 0.65 : 1}
-          //   position={[0, -3.5, 0]}
-          //   rotation={[0, -Math.PI / 4, 0]}
-        >
+        <group scale={isMobile ? 0.45 : isTablet ? 0.65 : 1}>
           <Computers />
         </group>
       </Suspense>
