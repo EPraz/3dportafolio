@@ -3,16 +3,16 @@ export const abilities = [
   {
     imgPath: "/images/logos/react-native.png",
     title: "Scalable Web & Mobile",
-    desc: "React, React Native, .NET & Node.js para lanzar apps rápidas y confiables que los usuarios disfrutan.",
+    desc: "React, React Native, .NET & Node.js to ship fast, reliable apps users love.",
   },
   {
     imgPath: "/images/logos/azure-logo.png",
     title: "Robust APIs & Cloud",
-    desc: "REST/GraphQL, SQL Server/MongoDB y Azure (Functions, Web Apps) con enfoque en rendimiento y seguridad.",
+    desc: "REST/GraphQL, SQL Server/No SQL Servevr, and Azure (Functions, Web Apps) with a focus on performance and security.",
   },
   {
     imgPath: "/images/time.png",
     title: "Quality & On-Time Delivery",
-    desc: "Arquitectura limpia, tests (xUnit/Jest) y CI/CD para cumplir plazos sin sorpresas.",
+    desc: "Clean architecture, tests (xUnit/Jest), and CI/CD to hit deadlines without surprises.",
   },
 ];

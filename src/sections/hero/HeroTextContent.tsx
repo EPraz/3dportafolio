@@ -13,8 +13,8 @@ const HeroTextContent = () => {
   });
 
   return (
-    <header className="flex flex-col justify-center md:w-full w-screen md: px-20 px-5">
-      <div className="flex flex-col gap-7">
+    <header className="flex flex-col justify-center md:w-full w-screen md:px-20 px-5">
+      <div className="flex flex-col gap-7 max-w-[720px] md:max-w-[780px] xl:max-w-[820px]">
         <div className="hero-text">
           <h2>
             Shaping{" "}

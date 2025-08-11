@@ -1,21 +1,44 @@
-import { Points, PointMaterial } from "@react-three/drei";
+import { Points, PointMaterial, AdaptiveDpr } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { inSphere } from "maath/random";
-import { Suspense, useRef } from "react";
+import { Suspense, useMemo, useEffect, useState, useRef } from "react";
 import * as THREE from "three";
 
-const Stars = () => {
-  const ref = useRef<THREE.Points>(null!);
+function useLowPowerMode() {
+  const [lowPower, setLowPower] = useState(false);
 
-  const positions = inSphere(new Float32Array(5000), { radius: 3 });
-  if (positions.some((v) => isNaN(v))) {
-    console.error("NaN detected in positions array");
-  }
+  useEffect(() => {
+    // 1) respect "prefers-reduced-motion"
+    const mq = window.matchMedia?.("(prefers-reduced-motion: reduce)");
+    if (mq?.matches) setLowPower(true);
+    const onMq = (e: MediaQueryListEvent) => setLowPower(e.matches);
+    mq?.addEventListener?.("change", onMq);
+
+    // 2) If browsers supports Battery Status (not in iOS),
+    // disabled if not charging
+    (navigator as any).getBattery?.().then((b: any) => {
+      const update = () => setLowPower(!b.charging);
+      update();
+      b.addEventListener("chargingchange", update);
+    });
+
+    return () => mq?.removeEventListener?.("change", onMq);
+  }, []);
+
+  return lowPower;
+}
+
+const Stars = ({ count }: { count: number }) => {
+  const ref = useRef<THREE.Points>(null!);
+  const positions = useMemo(
+    () => inSphere(new Float32Array(count * 3), { radius: 3 }),
+    [count]
+  );
+
   useFrame((_, delta) => {
-    if (ref.current) {
-      ref.current.rotation.x -= delta / 10;
-      ref.current.rotation.y -= delta / 15;
-    }
+    if (!ref.current) return;
+    ref.current.rotation.x -= delta / 14;
+    ref.current.rotation.y -= delta / 18;
   });
 
   return (
@@ -38,12 +61,32 @@ const Stars = () => {
   );
 };
 
-const StarsCanvas = () => {
+type Props = {
+  starsOn: boolean;
+};
+const StarsCanvas = ({ starsOn }: Props) => {
+  const lowPower = useLowPowerMode();
+
+  // If user want to turn it off
+  if (!starsOn) return null;
+
+  const count = lowPower ? 1200 : 3000; // antes 5000
+  const dpr: [number, number] = lowPower ? [1, 1.25] : [1, 2];
+
   return (
-    <div className="w-full h-auto absolute inset-0 z-[-1]">
-      <Canvas camera={{ position: [0, 0, 2.5] }}>
+    <div className="w-full h-auto absolute inset-0 z-[-1] pointer-events-none">
+      <Canvas
+        camera={{ position: [0, 0, 2.5] }}
+        dpr={dpr}
+        gl={{
+          powerPreference: lowPower ? "low-power" : "high-performance",
+          antialias: !lowPower,
+        }}
+        frameloop="always"
+      >
+        <AdaptiveDpr pixelated />
         <Suspense fallback={null}>
-          <Stars />
+          <Stars count={count} />
         </Suspense>
       </Canvas>
     </div>

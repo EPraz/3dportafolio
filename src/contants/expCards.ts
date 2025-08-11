@@ -12,46 +12,45 @@ export interface ExpCardsProps {
 export const expCards: ExpCardsProps[] = [
   {
     review:
-      "Ownership técnico en APIs y microservicios con .NET, mejoras de modularidad, calidad y entregas a tiempo.",
+      "Technical ownership across .NET APIs and microservices — improved modularity, quality, and on-time delivery.",
     imgPath: "/images/logos/controlrisks.png",
     logoPath: "/images/logos/controlrisks.png",
     title: "Software Engineer — Control Risks",
     date: "Mar 2023 – Present",
     responsibilities: [
-      "Desarrollo y mantenimiento de REST APIs y microservicios con ASP.NET Core y Node.js.",
-      "Code reviews, pair programming y workshops para elevar estándares de calidad.",
-      "Pruebas unitarias con xUnit/Jest (≈60% coverage en módulos asignados).",
-      "Contribución a 5 proyectos cross-functional usando React, C#, SQL Server y MongoDB.",
-      "Liderazgo en ceremonias Scrum y soporte como Team Lead en ausencias del manager.",
-      "Documentación técnica: especificaciones de diseño, contratos OpenAPI/Swagger y RCAs.",
-      "Optimización y debugging de funcionalidades críticas en producción.",
+      "Developed and maintained RESTful APIs and microservices using ASP.NET Core and Node.js, improving system modularity and maintainability.",
+      "Conducted regular code reviews, paired programming sessions, and technical workshops to improve code quality.",
+      "Wrote and executed unit tests with xUnit and Jest to validate key business logic, achieving 60% coverage in assigned modules.",
+      "Contributed to 5 cross-functional projects, applying React, C#, SQL Server, and CosmosDB to deliver scalable and efficient solutions.",
+      "Led Scrum ceremonies and acted as Team Lead during manager absences (daily stand-ups, sprint planning, retrospectives), enforcing best practices and continuous integration to ensure timely delivery.",
+      "Developed and maintained comprehensive technical documentation, including design specifications, API contracts (OpenAPI/Swagger), and root cause analysis reports for production incidents.",
+      "Played a key role in improving functionality, debugging critical issues, and optimizing application performance across multiple initiatives.",
+      "Collaborated with diverse teams to ensure seamless project delivery within tight deadlines.",
     ],
   },
   {
     review:
-      "Sitios más rápidos y estables: auditorías, optimizaciones y buenas prácticas de seguridad.",
+      "Faster, more stable sites through performance audits, optimizations, and security best practices.",
     imgPath: "/images/logos/lios.jpg",
     logoPath: "/images/logos/lios.jpg",
     title: "Web Specialist — Live And Invest Overseas",
     date: "Sep 2020 – Oct 2022",
     responsibilities: [
-      "Desarrollo y mantenimiento de sitios WordPress con plantillas personalizadas.",
-      "Auditorías de performance; mejoras de CSS/JS para ≈20% menos de tiempo de carga.",
-      "Reducción de bounce rate en ≈23% mediante mejoras UX y rendimiento.",
-      "Buenas prácticas de seguridad: gestión de plugins, control de accesos y vulnerabilidades.",
+      "Developed and maintained responsive WordPress sites with custom page templates, reducing bounce rates by 23% and improving user engagement.",
+      "Conducted performance audits and applied CSS and JavaScript optimizations to achieve 20% faster page load times.",
+      "Ensured website security and compliance by applying best practices in plugin management, access control, and regular vulnerability assessments.",
     ],
   },
   {
     review:
-      "Proyectos full-stack para aprendizaje continuo y portafolio, emulando estándares enterprise.",
+      "Full-stack projects for continuous learning and portfolio work, modeled after enterprise standards.",
     imgPath: "/images/logos/self-taugh.jpg",
     logoPath: "/images/logos/self-taugh.jpg",
     title: "Self-Taught Web Developer — Personal Projects",
     date: "Apr 2020 – Present",
     responsibilities: [
-      "Aplicaciones full-stack con React, React Native, Node.js y Express.",
-      "Adopción de patrones, testing y pipelines CI/CD para acercarse a prácticas enterprise.",
-      "Enfoque en escalabilidad, DX y documentación.",
+      "•	Designed and built full-stack applications using React, React Native, Node.js, to demonstrate proficiency in modern web development.",
+      "•	Explored and applied design patterns, unit testing frameworks, and CI/CD pipelines to personal projects to mirror enterprise development standards.",
     ],
   },
 ];

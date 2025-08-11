@@ -20,7 +20,7 @@ const Logo = () => {
       <div className="gradient-edge" />
       <div className="gradient-edge" />
 
-      <div className="marquee h-26">
+      <div className="marquee">
         <div className="marquee-box md:gap-12 gap-5">
           {[...logoIconsList, ...logoIconsList, ...logoIconsList].map(
             (icon, i) => (

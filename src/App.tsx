@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { NavBar, StarsCanvas } from "./components";
 import {
   Contact,
@@ -12,11 +13,17 @@ import {
 } from "./sections";
 
 const App = () => {
+  const [starsOn, setStarsOn] = useState(true);
+  // turnOff = true -> starsOn = false
+  const handleTurnOffStars = (turnOff: boolean) => {
+    setStarsOn(!turnOff);
+  };
+
   return (
     <main>
       <div className="relative z-[10]">
-        <StarsCanvas />
-        <NavBar />
+        <StarsCanvas starsOn={starsOn} />
+        <NavBar handleTurnOffStars={handleTurnOffStars} starsOn={starsOn} />
         <Hero />
         <Showcase />
         <Logo />
