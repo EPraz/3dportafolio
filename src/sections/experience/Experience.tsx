@@ -59,7 +59,7 @@ const Experience = () => {
       <div className="w-full h-full md:px-20 px-5">
         <TitleHeader
           title="Professional Work Experience"
-          sub="💼 My Carrer Overview"
+          sub="💼 Career Overview"
         />
 
         <div className="mt-32 relative">
@@ -68,8 +68,12 @@ const Experience = () => {
               <div key={index} className="exp-card-wrapper ">
                 <div className="xl:w-2/6">
                   <GlowCard card={card} index={index}>
-                    <div>
-                      <img src={card.imgPath} alt={card.title} />
+                    <div className="flex items-center justify-center w-full h-full">
+                      <img
+                        src={card.imgPath}
+                        alt={card.title}
+                        className="max-w-[300px] max-h-[200px] object-contain rounded-lg shadow-lg"
+                      />
                     </div>
                   </GlowCard>
                 </div>

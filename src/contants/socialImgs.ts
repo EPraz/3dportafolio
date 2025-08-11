@@ -6,23 +6,13 @@ export type SocialImgsProps = {
 
 export const socialImgs: SocialImgsProps[] = [
   {
-    name: "insta",
-    url: "https://www.instagram.com/",
-    imgPath: "/images/insta.png",
-  },
-  {
-    name: "fb",
-    url: "https://www.facebook.com/",
-    imgPath: "/images/fb.png",
-  },
-  {
-    name: "x",
-    url: "https://www.x.com/",
-    imgPath: "/images/x.png",
-  },
-  {
-    name: "linkedin",
-    url: "https://www.linkedin.com/",
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/edwin-pile-583652234/",
     imgPath: "/images/linkedin.png",
+  },
+  {
+    name: "GitHub",
+    url: "https://github.com/EPraz",
+    imgPath: "/images/logos/github.JPG",
   },
 ];

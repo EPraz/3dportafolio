@@ -7,10 +7,11 @@ const FeatureCards = () => {
         {abilities.map(({ imgPath, title, desc }, index) => (
           <div
             key={index}
-            className="card-border rounded-xl p-8 flex flex-col gap-4"
+            className="card-border rounded-xl p-8 flex flex-col gap-4 transition-transform duration-300 hover:-translate-y-1"
+            aria-label={title}
           >
             <div className="size-14 flex items-center justify-center">
-              <img src={imgPath} alt={title} />
+              <img src={imgPath} alt={title} loading="lazy" />
             </div>
 
             <h3 className="text-white text-2xl font-semibold">{title}</h3>

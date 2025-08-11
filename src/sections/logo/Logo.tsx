@@ -8,7 +8,7 @@ interface LogoIconProps {
 }
 const LogoIcon = ({ icon }: LogoIconProps) => {
   return (
-    <div className="flex-none flex-center marquee-item">
+    <div className="flex-none flex-center marquee-item md:w-[48px] w-[36px]">
       <img src={icon.imgPath} alt={icon?.name ?? icon.imgPath} />
     </div>
   );
@@ -20,15 +20,13 @@ const Logo = () => {
       <div className="gradient-edge" />
       <div className="gradient-edge" />
 
-      <div className="marquee h-52">
+      <div className="marquee h-26">
         <div className="marquee-box md:gap-12 gap-5">
-          {logoIconsList.map((icon, index) => (
-            <LogoIcon key={index} icon={icon} />
-          ))}
-
-          {logoIconsList.map((icon, index) => (
-            <LogoIcon key={index} icon={icon} />
-          ))}
+          {[...logoIconsList, ...logoIconsList, ...logoIconsList].map(
+            (icon, i) => (
+              <LogoIcon key={i} icon={icon} />
+            )
+          )}
         </div>
       </div>
     </section>

@@ -9,3 +9,4 @@ export * from "./socialImgs";
 export * from "./techStackIcons";
 export * from "./techStackImgs";
 export * from "./testimonials";
+export * from "./projects";

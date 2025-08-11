@@ -34,9 +34,15 @@ const NavBar = () => {
           </ul>
         </nav>
 
-        <a href="#contact" className="contact-btn group">
+        {/* <a href="#contact" className="contact-btn group">
           <div className="inner">
             <span>Contact</span>
+          </div>
+        </a> */}
+
+        <a href="/cv/CV_Edwin_Pile.pdf" download className="contact-btn group">
+          <div className="inner">
+            <span>Download CV</span>
           </div>
         </a>
       </div>

@@ -1,17 +1,18 @@
+// constants
 export const abilities = [
   {
-    imgPath: "/images/seo.png",
-    title: "Quality Focus",
-    desc: "Delivering high-quality results while maintaining attention to every detail.",
+    imgPath: "/images/logos/react-native.png",
+    title: "Scalable Web & Mobile",
+    desc: "React, React Native, .NET & Node.js para lanzar apps rápidas y confiables que los usuarios disfrutan.",
   },
   {
-    imgPath: "/images/chat.png",
-    title: "Reliable Communication",
-    desc: "Keeping you updated at every step to ensure transparency and clarity.",
+    imgPath: "/images/logos/azure-logo.png",
+    title: "Robust APIs & Cloud",
+    desc: "REST/GraphQL, SQL Server/MongoDB y Azure (Functions, Web Apps) con enfoque en rendimiento y seguridad.",
   },
   {
     imgPath: "/images/time.png",
-    title: "On-Time Delivery",
-    desc: "Making sure projects are completed on schedule, with quality & attention to detail.",
+    title: "Quality & On-Time Delivery",
+    desc: "Arquitectura limpia, tests (xUnit/Jest) y CI/CD para cumplir plazos sin sorpresas.",
   },
 ];

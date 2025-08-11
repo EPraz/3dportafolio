@@ -8,7 +8,7 @@ import {
   Logo,
   Showcase,
   TechStack,
-  Testimonials,
+  // Testimonials,
 } from "./sections";
 
 const App = () => {
@@ -23,7 +23,7 @@ const App = () => {
         <FeatureCards />
         <Experience />
         <TechStack />
-        <Testimonials />
+        {/* <Testimonials /> */}
         <Contact />
         <Footer />
       </div>

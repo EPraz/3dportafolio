@@ -41,13 +41,15 @@ const HeroTextContent = () => {
         </div>
 
         <p className="text-white-50 md:text-xl relative z-10 pointer-events-none">
-          Hi, I'm Edwin, a FullStack Developer
+          Hi, I'm Edwin, a Full Stack Developer crafting scalable web & mobile
+          applications with React, React Native, .NET & Node.js — delivering
+          real results from concept to deployment.
         </p>
 
         <Button
           className="md:w-80 md:h-16 w-60 h-12"
           id="button"
-          text="See my work"
+          text="View My Projects"
         />
       </div>
     </header>

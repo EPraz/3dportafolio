@@ -1,35 +1,13 @@
-export const logoIconsList: { imgPath: string; name?: string }[] = [
-  {
-    imgPath: "/images/logos/company-logo-1.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-2.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-3.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-4.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-5.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-6.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-7.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-8.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-9.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-10.png",
-  },
-  {
-    imgPath: "/images/logos/company-logo-11.png",
-  },
+export const logoIconsList = [
+  { imgPath: "/images/logos/react.png", name: "React" },
+  { imgPath: "/images/logos/react-native.png", name: "React Native" },
+  { imgPath: "/images/logos/csharp.png", name: ".NET" },
+  { imgPath: "/images/logos/node.png", name: "Node.js" },
+  { imgPath: "/images/logos/azure-logo.png", name: "Azure" },
+  { imgPath: "/images/logos/graphql.png", name: "GraphQL" },
+  { imgPath: "/images/logos/git.svg", name: "Git" },
+  { imgPath: "/images/logos/xunit.png", name: "XUnit" },
+  { imgPath: "/images/logos/jest.png", name: "Jest" },
+  { imgPath: "/images/logos/sql.png", name: "SQL Server" },
+  { imgPath: "/images/logos/nosql.webp", name: "No SQL Server" },
 ];
