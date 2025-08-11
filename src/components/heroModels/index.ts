@@ -1,1 +1,1 @@
-export { default as HeroExperience } from "./heroExperience";
+export { default as HeroExperience } from "./HeroExperience";
