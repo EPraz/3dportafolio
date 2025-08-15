@@ -18,9 +18,22 @@ export type Status = "live" | "coming-soon" | undefined;
 
 export const projects: Project[] = [
   {
+    title: "Camera Viewer App",
+    subtitle: "Prototype UI for multi-camera monitoring",
+    cover: "/images/CameraUIMVPdesktopCapture.png",
+    bg: "#ddeeff",
+    role: "Mobile UI Developer",
+    stack: ["React Native", "Expo", "TypeScript"],
+    summary:
+      "Prototype app to visualize multiple camera feeds in one place. Users can select a device (e.g., boat or location) and view its associated cameras, with the ability to focus on a specific stream. Designed to integrate real-time video in future iterations.",
+    repoUrl: "https://github.com/EPraz/camera-ui-mvp",
+    status: "live",
+    liveUrl: "https://camera-ui-mvp.vercel.app/",
+  },
+  {
     title: "Project Management App",
     subtitle: "Sprints, roles, taskboard, charts",
-    cover: "/images/elementor-placeholder-image.png",
+    cover: "/images/ProjectManagementCaptureDesktop.png",
     bg: "#0f172a",
     role: "Full Stack Developer",
     stack: [
@@ -33,7 +46,7 @@ export const projects: Project[] = [
     ],
     summary:
       "Comprehensive project management platform with role-based access, sprint planning, and an interactive drag-and-drop taskboard. Includes progress tracking through charts and reports.",
-    liveUrl: "https://your-domain.app",
+    liveUrl: "https://projectmanagement.fly.dev/",
     repoUrl: "https://github.com/EPraz/projectManagement",
     status: "coming-soon",
     layout: "featured",
@@ -50,18 +63,7 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/EPraz/ecom-frontend-native",
     status: "coming-soon",
   },
-  {
-    title: "Camera Viewer App",
-    subtitle: "Prototype UI for multi-camera monitoring",
-    cover: "/images/elementor-placeholder-image.png",
-    bg: "#ddeeff",
-    role: "Mobile UI Developer",
-    stack: ["React Native", "Expo", "TypeScript"],
-    summary:
-      "Prototype app to visualize multiple camera feeds in one place. Users can select a device (e.g., boat or location) and view its associated cameras, with the ability to focus on a specific stream. Designed to integrate real-time video in future iterations.",
-    repoUrl: "https://github.com/EPraz/camera-ui-mvp",
-    status: "coming-soon",
-  },
+
   // {
   //   title: "Services Marketplace",
   //   subtitle: "Connect clients with service providers",

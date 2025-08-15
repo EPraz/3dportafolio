@@ -12,30 +12,35 @@ const LiveCTA = ({
   size?: "sm" | "md";
 }) => {
   const liveEnabled = status === "live" && !!url;
-  const cls = size === "sm" ? "h-9 px-3" : "h-10 px-4";
+  const sizeCls = size === "sm" ? "h-9 px-3 text-sm" : "h-10 px-4";
 
   if (liveEnabled) {
     return (
       <a
+        id={id}
         href={url}
         target="_blank"
-        rel="noreferrer"
-        className="btn-primary-live"
+        rel="noreferrer noopener"
+        className={`inline-flex items-center justify-center rounded-lg
+          border border-white/15 text-white/90 hover:bg-white/5 transition
+          ${sizeCls} cursor-pointer select-none btn-primary-live`}
       >
-        <button id={id} className={cls}>
-          Live
-        </button>
+        Live
       </a>
     );
   }
 
-  // Variante deshabilitada (mismo look & feel, sin interacción)
+  // Deshabilitado (mismo look, sin interacción)
   return (
-    <div className="pointer-events-none opacity-75 ">
-      <button id={`${id}-disabled`} className={cls}>
-        Live
-      </button>
-    </div>
+    <span
+      id={`${id}-disabled`}
+      aria-disabled="true"
+      className={`inline-flex items-center justify-center rounded-lg
+        border border-white/10 text-white/50 bg-white/5
+        ${sizeCls} cursor-not-allowed select-none`}
+    >
+      Live
+    </span>
   );
 };
 

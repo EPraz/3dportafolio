@@ -39,11 +39,11 @@ const Showcase = () => {
         {projects.map((p) => (
           <article
             key={p.title}
-            className="project-card card-border rounded-xl overflow-hidden flex flex-col"
+            className="project-card group card-border rounded-xl overflow-hidden flex flex-col"
           >
             {/* Imagen con proporción fija; cubre todo el contenedor */}
             <div
-              className="relative w-full aspect-[16/10]"
+              className="relative w-full aspect-[16/10] overflow-hidden rounded-lg bg-white/5"
               style={{ background: p.bg ?? "transparent" }}
             >
               <StatusBadge status={p.status as Status} />
@@ -51,9 +51,12 @@ const Showcase = () => {
                 src={p.cover}
                 alt={p.title}
                 loading="lazy"
-                className={`absolute inset-0 w-full h-full object-cover transition
-                  ${p.status === "coming-soon" ? "grayscale" : ""}`}
+                className={`absolute inset-0 w-full h-full object-cover
+                    transition-transform duration-500 ease-out
+                    ${p.status === "coming-soon" ? "grayscale" : ""}
+                    scale-[0.96] md:group-hover:scale-100`}
               />
+              <span className="pointer-events-none absolute inset-0 rounded-lg ring-1 ring-white/10" />
             </div>
 
             {/* Contenido */}
